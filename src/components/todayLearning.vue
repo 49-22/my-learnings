@@ -7,7 +7,7 @@
       </v-menu>
     </v-flex>
     <v-flex>
-      <v-btn @click.stop="dialog=true">click me</v-btn>
+      <v-btn @click.stop="dialog=true" color="primary">click me</v-btn>
       <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false" scrollable>
         <v-card>
           <v-toolbar style="flex: 0 0 auto;" dark class="primary">
