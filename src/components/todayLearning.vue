@@ -14,11 +14,13 @@
             <v-btn icon @click.native="dialog = false" dark>
               <v-icon>close</v-icon>
             </v-btn>
-            <v-toolbar-title>My Learnings on {{picker}}</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-              <v-btn dark flat @click.native="dialog = false">Save</v-btn>
-            </v-toolbar-items>
+            <v-toolbar-title>
+              <v-flex>
+                My Learnings on
+              </v-flex>
+              <v-flex>
+                {{picker}}</v-flex>
+            </v-toolbar-title>
           </v-toolbar>
           <v-content>
             <v-list three-line subheader>
