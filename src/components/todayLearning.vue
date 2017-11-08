@@ -3,7 +3,7 @@
     <v-flex>
       <v-menu>
         <v-text-field slot="activator" label="Pick a date to view" v-model="picker" prepend-icon="event" readonly></v-text-field>
-        <v-date-picker v-model="picker" :date-format="date => new Date(date).toDateString()" :formatted-value.sync="formatted"></v-date-picker>
+        <v-date-picker v-model="picker" :date-format="date => new Date(date).toDateString()" :formatted-value.sync="formatted"  :allowed-dates="allowedDates"></v-date-picker>
       </v-menu>
     </v-flex>
     <v-flex>
@@ -47,7 +47,8 @@ export default {
     return {
       dialog: false,
       picker: null,
-      formatted: null
+      formatted: null,
+      allowedDates: date => new Date() > new Date(date)
     }
   }
 
