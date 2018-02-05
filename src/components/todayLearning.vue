@@ -37,12 +37,19 @@
         </v-card>
       </v-dialog>
     </v-flex>
+
+    <v-flex>
+      <push-notification></push-notification>
+    </v-flex>
   </v-container>
 </template>
 
 <script>
+import pushNotification from './pushNotification.vue'
+
 export default {
   name: 'todayLearning',
+  components: { pushNotification },
   data () {
     return {
       dialog: false,
